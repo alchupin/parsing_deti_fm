@@ -62,7 +62,7 @@ def download_mp3(source_list: list) -> None:
 
         path = Path(PATH)
         path.mkdir(parents=True, exist_ok=True)
-        audio_file_path = Path(f"{path}/{title} с картинкой.mp3")
+        audio_file_path = Path(f"{path}/{title}.mp3")
         if not audio_file_path.is_file():
             urllib.request.urlretrieve(audio_url, audio_file_path)
             audiofile = eyed3.load(audio_file_path)
